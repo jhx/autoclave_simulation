@@ -185,28 +185,8 @@ rx2 = struct(
   'ac_priority',0,
   'pressure',   130);
 
-
-% moved to runplan file
-% autoclave parameters
-% autoclave_lifo = [1 4 7 10 2 5 8 11 3 6 9]; % LIFO queue of autoclaves to be loaded
-ac_cycle = [2 8 2; 2 8 4; 4 8 2]; % matrix containing A/C cycles SM1 SM2 Ace
-
-% retrieve pre-saved run plan sequence
-% 3 lines: SM1, SM2, NLM
-% runplan0
-
-% 2 lines: SM1, SM2
-% runplan1
-
-% PULASKI -- 2 lines: SM1, SM2
-site = 'Pulaski';
-
-% Tacoma_2 -- 1 line: SM2
-% site = 'Tacoma_2';
-
-% load site-specific run plan
-printf('%s- Loading run plan "%s"\n', blanks(2), ['runplan_' site])
-feval(['runplan_' site])
+% load runplan(s)
+runplan                 % loads runplan from file: runplan.m
 
 % initial calculations of stack drop intervals for each machine, product
 printf('%s- Machine Configuration\n', blanks(2))
