@@ -25,9 +25,9 @@ endfunction
 
 % function calculates standard feet based on product parameters
 function result = stdft(product)
-  # add default parameter to delete sf
-  # return conversion factor if 1 arg
-  # return calc'd stdft if 2 args
+  % add default parameter to delete sf
+  % return conversion factor if 1 arg
+  % return calc'd stdft if 2 args
   result = product.thickness/(5/16);
 endfunction
 
@@ -39,8 +39,8 @@ endfunction
 
 % function calculates square feet per stack based on machine/product parameters
 function result = sf_stack(machine, product)
-  # add default parameter to delete machine
-  # assume machine.width=60, machine.tubs <> NA
+  % add default parameter to delete machine
+  % assume machine.width=60, machine.tubs <> NA
   result = product.sheets*sf_sheet(machine, product);
 endfunction
 

@@ -34,7 +34,7 @@ for i = 1:k_duration
       machine{m}.runplan{1}.acc -= mr.interval;
       p = mr.product.precure;
       
-      # append stack(s) to precure queue
+      % append stack(s) to precure queue
       for n = 1:machine{m}.parameters.stacks
         q_precuring{m} = [q_precuring{m}; i i+p];
         ++log_daily(log_day).machine(m).stacks_produced;
@@ -222,23 +222,23 @@ tc1=cputime();
 
 
 
-#  # calculate pressure for each autoclave
-#  for n = 1:11
-#    # retrieve indices for autoclaves using SM1 cycle
-#    idx = find(q_ac(1, :)==1);
-#    if (length(idx) > 0)
-#      idx_press = sum(ac_cycle(q_ac(1, idx), :)')*60-q_ac(2, idx)+i;
-#      idx_press(idx_press < 1) = 1;
-#      idx_press(idx_press > length(ac_sm1_pressure)) = length(ac_sm1_pressure);
-#      ac_pressure(idx) = ac_sm1_pressure(idx_press);
-#    endif
-#    
-#    # retrieve indices for autoclaves using SM2 cycle
-#    idx = find(q_ac(1, :)==2);
-#    if (length(idx) > 0)
-#      idx_press = sum(ac_cycle(q_ac(1, idx), :)')*60-q_ac(2, idx)+i;
-#      idx_press(idx_press < 1) = 1;
-#      idx_press(idx_press > length(ac_sm2_pressure)) = length(ac_sm2_pressure);
-#      ac_pressure(idx) = ac_sm2_pressure(idx_press);
-#    endif
-#  endfor
+%  % calculate pressure for each autoclave
+%  for n = 1:11
+%    % retrieve indices for autoclaves using SM1 cycle
+%    idx = find(q_ac(1, :)==1);
+%    if (length(idx) > 0)
+%      idx_press = sum(ac_cycle(q_ac(1, idx), :)')*60-q_ac(2, idx)+i;
+%      idx_press(idx_press < 1) = 1;
+%      idx_press(idx_press > length(ac_sm1_pressure)) = length(ac_sm1_pressure);
+%      ac_pressure(idx) = ac_sm1_pressure(idx_press);
+%    endif
+%
+%    % retrieve indices for autoclaves using SM2 cycle
+%    idx = find(q_ac(1, :)==2);
+%    if (length(idx) > 0)
+%      idx_press = sum(ac_cycle(q_ac(1, idx), :)')*60-q_ac(2, idx)+i;
+%      idx_press(idx_press < 1) = 1;
+%      idx_press(idx_press > length(ac_sm2_pressure)) = length(ac_sm2_pressure);
+%      ac_pressure(idx) = ac_sm2_pressure(idx_press);
+%    endif
+%  endfor
