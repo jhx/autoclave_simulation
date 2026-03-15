@@ -10,11 +10,8 @@ hour = hours = 60;
 day = days = 24*hours;
 
 % miscellaneous simulation constants
-% k_ac_load_time = 15;    % number of minutes it takes to load autoclave train
-% k_ac_unload_time = 15;  % number of minutes it takes to unload autoclave train
-
-k_ac_load_time = 30;    % number of minutes it takes to load autoclave train
-k_ac_unload_time = 23;  % number of minutes it takes to unload autoclave train
+k_ac_load_time = 15;    % number of minutes it takes to load autoclave train
+k_ac_unload_time = 15;  % number of minutes it takes to unload autoclavetrain
 
 k_start_time = 0700;    % offset in 24h format
 % all autoclaves assumed to be same length for now; need to fix this

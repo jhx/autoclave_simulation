@@ -2,9 +2,14 @@
 % run plan sequence for each machine
 m = 0;
 
+% override Globals (globals.m)
 % autoclave parameters
-autoclave_lifo = [1 4 7 10 2 5 8 3 6 9]; % LIFO queue of autoclaves to be loaded
+k_ac_load_time = 30;    % number of minutes it takes to load autoclave train
+k_ac_unload_time = 23;  % number of minutes it takes to unload autoclave train
 k_autoclave_length = 200; % autoclave length, [ft]
+
+% override Parameters (parameters.m)
+autoclave_lifo = [1 4 7 10 2 5 8 3 6 9]; % LIFO queue of autoclaves to be loaded
 
 
 % BEGIN run plan for next machine
