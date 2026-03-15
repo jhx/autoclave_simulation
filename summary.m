@@ -144,4 +144,4 @@ for d = 1:log_day
   printf('----------------------------------------------------------------------\n');
 endfor
 
-# add length(wip), autoclaves utilized, max/mean 10'/12' pallets in use, log_precure
+% add length(wip), autoclaves utilized, max/mean 10'/12' pallets in use, log_precure
