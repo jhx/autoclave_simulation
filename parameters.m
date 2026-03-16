@@ -185,6 +185,9 @@ rx2 = struct(
   'ac_priority',0,
   'pressure',   130);
 
+% set simulation duration
+k_duration = 14*days;   % duration of simulation
+
 % load runplan(s)
 runplan                 % loads runplan from file: runplan.m
 
@@ -240,7 +243,5 @@ q_precuring = cell(1, length(machine)); % stack FIFO for product currently in pr
 log_machine = machine; % maintain snapshot of original runplan for summary page
 log_day = 0;
 
-% set simulation duration
-k_duration = 14*days;   % duration of simulation
 printf('%s- Simulation Configuration\n', blanks(2));
 printf('%sDuration: %4.1f day(s)\n', blanks(4), k_duration/days);

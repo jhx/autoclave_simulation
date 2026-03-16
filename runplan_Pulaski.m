@@ -10,6 +10,7 @@ k_autoclave_length = 200; % autoclave length, [ft]
 
 % override Parameters (parameters.m)
 autoclave_lifo = [1 4 7 10 2 5 8 3 6 9]; % LIFO queue of autoclaves to be loaded
+k_duration = 14*days;   % duration of simulation
 
 
 % BEGIN run plan for next machine
